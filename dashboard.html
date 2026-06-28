@@ -164,6 +164,25 @@
             cursor: not-allowed;
         }
 
+        /* Report Button style inheriting corporate colors */
+        .btn-report {
+            padding: 8px 16px;
+            background-color: var(--raymond-red);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .btn-report:hover {
+            background-color: var(--raymond-dark-red);
+        }
+
         /* Interactive Action Approve Button */
         .btn-approve {
             padding: 6px 12px;
@@ -292,7 +311,6 @@
 <body>
 
     <header>
-
          <div class="logo-wrapper">
             <img src="Raymond100YearsLogo_f02986c7_d525_43d0_b5a1_2fde4d3ede8d.png" alt="Raymond 100 Years" class="corner-logo">
         </div>
@@ -308,6 +326,7 @@
                 <h2>Recent Gate Pass Records</h2>
                 <div style="display: flex; gap: 15px; align-items: center;">
                     <a href="index.html" class="navigation-link">← New Request Form</a>
+                    <a href="reports.html" class="btn-report">View Reports</a>
                     <button class="btn-refresh" id="refreshBtn" onclick="fetchAirtableData()">Refresh Data</button>
                 </div>
             </div>
